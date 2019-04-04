@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+
+	</p>
+</body>
+<script>
+	let original1 = "racecar";
+	let original2 = "whatever";
+	let palindrome = function(str){
+		var input = str;
+		var reverse = input.split('').reverse().join('');
+		var boolean;
+		if(input === reverse){
+			boolean = true;
+		} else {
+			boolean = false;
+		}
+
+		document.getElementById('original').innerHTML += `<p>Original Word is : ${input}</p>`;
+		document.getElementById('original').innerHTML += `<p>Reversed Word is : ${reverse}. Is it a palindrome? ${boolean}</p>`;
+	}
+	
+	palindrome(original1);
+	palindrome(original2);
+</script>
+</html>
