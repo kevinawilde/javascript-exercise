@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+		<p id="body">
+			
+		</p>
+
+	</p>
+</body>
+<script>
+	var input = "javascript is my most favorite language";
+	let output = ()=> {
+		let upperCase = input.split(' ').map(x => x.charAt(0).toUpperCase() + x.slice(1)).join(' ');
+		document.getElementById('original').innerHTML = `Original Sentence is : ${input}`;
+		document.getElementById('body').innerHTML = `New sentence is : ${upperCase}`;
+	}
+	output();
+</script>
+</html>
