@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+		<p id="body">
+			
+		</p>
+
+	</p>
+</body>
+<script>
+	var input = "A 24 week coding bootcamp is making me nerd out!";
+	let output = ()=> {
+		let longestWord = 'A';
+		let inputArr = input.split(' ');
+		for ( let i = 0; i < inputArr.length; i++){
+			if(inputArr[i].length > longestWord.length){
+				longestWord = inputArr[i];
+			}
+		}
+		document.getElementById('original').innerHTML = `Original Sentence is : ${input}`;
+		document.getElementById('body').innerHTML = `Longest Word is : ${longestWord}`;
+	}
+	output();
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+		<p id="body">
+			
+		</p>
+
+	</p>
+</body>
+<script>
+	var input = 46;
+	var originalAmount = input;
+	var quarters = 0;
+	var dimes = 0;
+	var nickels = 0;
+	var pennies = 0;
+	var output = ()=> {
+		while ((input - 25) >= 0) {
+			input-=25;
+			quarters++;
+		}
+		while ((input - 10) >= 0) {
+			input-=10;
+			dimes++;
+		}
+		while ((input - 5) >= 0) {
+			input-=5;
+			nickels++;
+		}
+		while ((input - 1) >= 0) {
+			input-=1;
+			pennies++;
+		}
+		document.getElementById('original').innerHTML = `Original Amount is : ${originalAmount} cents`;
+		document.getElementById('body').innerHTML = `Quarters: ${quarters}, Dimes: ${dimes}, Nickels: ${nickels}, Pennies: ${pennies}`;
+	}
+	output();
+</script>
+</html>
