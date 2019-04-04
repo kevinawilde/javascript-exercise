@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Andrew reversed is:
+		<p id="body"></p>
+
+	</p>
+</body>
+<script>
+	
+	let alphabetize = () => {
+		let str = "Andrew";
+		let alphabet = str.split('').sort().join('');
+		document.getElementById("body").innerHTML = alphabet;
+	}
+	alphabetize();
+
+
+</script>
+</html>
