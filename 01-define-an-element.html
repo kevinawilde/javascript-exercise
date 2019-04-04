@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<p id= "body">Hi.</p>
+
+	</div>
+</body>
+<script>
+	var number = 1;
+
+    var str = "string";
+    var boolean = true;
+    var arr = ["esto", "is", "an", "array"];
+    var objectLiteral = {
+	    property: "something"
+    };
+    var object =  new Object();
+    object.name = "this is an Object";
+    var thisFunction = function(){
+	    return "this is a function";
+    }
+    function bodyedit(){
+    	document.getElementById("body").innerHTML = `number is ${number}, string is ${str}, boolean is ${boolean}, array is ${arr}, an object literal is this: ${objectLiteral}, an object is this : ${object}, a function is this ${thisFunction()}`
+    }
+    bodyedit();
+</script>
+
+</html>
+
+
+

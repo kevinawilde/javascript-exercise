@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>
+		Last Element #1:
+		<p id='numberOne'>1</p>
+	</p>
+	<p>Last Element #2:
+		<p id='numberTwo'>2</p>
+	</p>
+	<p>Last Element #3:
+		<p id='numberThree'>3</p>
+	</p>
+</body>
+<script>
+	var items1 = ['one','two', 'three', 'four', 'five','six', 'seven'];
+	var items2 = "A really long string";
+	var items3 = [[1,2,3], ['one','two','three'],[true,false,true]];
+	let returnAll = function() {
+		var items1return = items1[items1.length-1];
+		var items2return = items2.split(' ');
+		var items2returned = items2return[items2return.length - 1];
+		var items3return = items3[items3.length -1][items3.length -1];
+		document.getElementById('numberOne').innerHTML = items1return;
+		document.getElementById('numberTwo').innerHTML = items2returned;
+		document.getElementById('numberThree').innerHTML= items3return; 
+
+	}
+	returnAll();
+
+</script>
+</html>

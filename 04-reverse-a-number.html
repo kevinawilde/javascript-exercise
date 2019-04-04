@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>
+		Output is:
+		<p id="body"></p>
+
+	</p>
+</body>
+<script>
+	let input = 12345;
+	let reverse  = function(){
+		let output = input.toString().split('').reverse().join('');
+		document.getElementById('body').innerHTML = output;
+	}
+	reverse();
+</script>
+</html>
