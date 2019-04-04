@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+
+	</p>
+</body>
+<script>
+	let word = "finder";
+	let count = 0;
+	let vowelCount= function(){
+		let inputArr = word.split('');
+		for ( let i = 0; i < inputArr.length; i++){
+			if(inputArr[i] === 'a'|| inputArr[i] ==='e'|| inputArr[i] ==='i'|| inputArr[i] ==='o'|| inputArr[i] ==='u'){
+				count+= 1;
+			}
+		}
+		document.getElementById('original').innerHTML += `<p>Original Word is : ${word}</p>`;
+		document.getElementById('original').innerHTML += `<p>Vowel Count is : ${count}</p>`;
+	}
+	
+	vowelCount();
+</script>
+</html>
