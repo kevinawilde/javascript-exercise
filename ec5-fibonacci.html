@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+		Look at the Javascript Code
+	</p>
+</body>
+<script>
+	let word = "finder";
+	let result;
+	let fibonacci= function(num) {
+		let original = num
+		if (num < 2){
+			return num;
+		} else {
+			return fibonacci(num - 1) + fibonacci(num - 2);
+		}
+	}
+	
+	fibonacci(5);
+</script>
+</html>
