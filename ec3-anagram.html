@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+
+	</p>
+</body>
+<script>
+	let anagram1 = "finder";
+	let pair1= "friend";
+	let anagram2 = "hello";
+	let pair2= "bye";
+	let anagram= function(ana, pair){
+		var firstAna = ana.split('').sort().join('');
+		var compared = pair.split('').sort().join('');
+		var boolean;
+		if(firstAna === compared){
+			boolean = true;
+		} else {
+			boolean = false;
+		}
+
+		document.getElementById('original').innerHTML += `<p>Original Word is : ${ana}</p>`;
+		document.getElementById('original').innerHTML += `<p>Potential Anagram is : ${pair}. Is it an anagram? ${boolean}</p>`;
+	}
+	
+	anagram(anagram1, pair1);
+	anagram(anagram2, pair2);
+</script>
+</html>
