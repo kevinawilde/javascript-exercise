@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="original">
+
+	</p>
+</body>
+<script>
+	let firstPhrase1 = "ABAB";
+	let secondPhrase1 = "CDCD";
+	let third = 'yes';
+	let fourth =  'nod';
+	let patterns= function(first,second){
+		let ex1= first;
+		let ex2= second;
+		let input1 = ex1.split('');
+		let input2 = ex2.split('');
+		let charArr1 = input1.map(x => x.charCodeAt(0));
+		let charArr2 = input2.map(x => x.charCodeAt(0));
+		let returnArr1 = charArr1;
+		let returnArr2 = charArr2;
+		let baseline1 = returnArr1[0] ;
+		let baseline2= returnArr2[0];
+		for ( let i = 0; i < charArr1.length; i++){
+			returnArr1[i] = (charArr1[i] - baseline1);
+			returnArr2[i] = (charArr2[i] - baseline2);
+		}
+		let result1 = returnArr1.join('');
+		let result2 = returnArr2.join('');
+		let final1 = parseInt(result1);
+		let final2 = parseInt(result2);
+		boolean = (final1 == final2);
+		document.getElementById('original').innerHTML += `<p>Original Words are : ${ex1} and ${ex2}</p>`;
+		document.getElementById('original').innerHTML += `<p>Do they follow the same pattern? ${boolean} </p>`;
+	}
+	
+	patterns(firstPhrase1, secondPhrase1);
+	patterns(third, fourth);
+</script>
+</html>
